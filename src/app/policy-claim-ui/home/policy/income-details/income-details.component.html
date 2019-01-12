@@ -1,9 +1,9 @@
-<!-- 
-<form class="container">
+
+<form class="container" [formGroup]="incomeDetailsFormGroup">
   <label>Income Source</label>
-  <input type="text" name="incomesource" id="incomesource" placeholder="Income Source" ><br>
+  <input type="text" name="incomesource" id="incomesource" placeholder="Income Source" formControlName="incomeSource" ><br>
   <label>Total Income</label>
-  <input type="text" name="totalincome" id="totalincome" placeholder="total income"><br>
+  <input type="text" name="totalincome" id="totalincome" placeholder="total income" formControlName="totalIncome"><br>
  
 
-</form> -->
+</form>

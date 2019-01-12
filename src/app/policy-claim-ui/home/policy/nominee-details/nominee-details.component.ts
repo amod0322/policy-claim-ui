@@ -1,4 +1,6 @@
+import { PolicyFormBuilderService } from './../policy-form-builder.service';
 import { Component, OnInit } from '@angular/core';
+import{FormGroup,FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-nominee-details',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nominee-details.component.css']
 })
 export class NomineeDetailsComponent implements OnInit {
-
-  constructor() { }
+nomineeDetailsFormGroup:FormGroup;
+  constructor(private policyFormBuilderService:PolicyFormBuilderService) { }
 
   ngOnInit() {
+    console.log(this.policyFormBuilderService.getPolicyFormGroup());
+    this.nomineeDetailsFormGroup=this.policyFormBuilderService.getPolicyFormGroup().get('nomineeDetails') as FormGroup;
   }
 
 }

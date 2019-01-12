@@ -1,16 +1,16 @@
-<!-- nominee - details 
+nominee - details 
 
-<form class="container">
+<form class="container" [formGroup]="nomineeDetailsFormGroup">
   <label>Name</label>
-  <input type="text" name="name" id="name" placeholder="name" ><br>
+  <input type="text" name="name" id="name" placeholder="name" formControlName="name"><br>
   <label>Contact Number</label>
-  <input type="text" name="contact-number" id="contact-number" placeholder="contact-number"><br>
+  <input type="text" name="contact-number" id="contact-number" placeholder="contact-number" formControlName="contactNumber"><br>
   <label>Date of Birth</label>
-  <input type="text" name="date=of-birth" id="date-of-birth" placeholder="Date of Birth"><br>c
+  <input type="text" name="date=of-birth" id="date-of-birth" placeholder="Date of Birth" formControlName="dob"><br>c
   <label>RelationShip with Policy Holder</label>
-  <input type="text" name="relationship" id="relationship" placeholder="Relationship with Policy Holder"><br>
+  <input type="text" name="relationship" id="relationship" placeholder="Relationship with Policy Holder" formControlName="relationship"><br>
   <label>Percentage Stake</label>
-  <input type="text" name="percentage-stake id="percentage-stake" placeholder="Percentage Stake"><br>
+  <input type="text" name="percentage-stake" id="percentage-stake" placeholder="Percentage Stake" formControlName="percentageStake"><br>
  
 
-</form> -->
+</form>
