@@ -1,3 +1,4 @@
+import { PolicyFormBuilderService } from './policy-form-builder.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,14 +12,19 @@ export class PolicyComponent implements OnInit {
 
   navigation=PolicyNavigation;
   presentPolicy:PolicyNavigation;
-  constructor() { }
+  constructor(private policyFormBuilder:PolicyFormBuilderService) { }
 
   ngOnInit() {
     this.presentPolicy=PolicyNavigation.PERSONAL_DETAILS;
+    this.policyFormBuilder.build()
 
   }
 
   navigationChange(){
+    
+    if(this.presentPolicy==PolicyNavigation.PERSONAL_DETAILS){
+      console.log(this.policyFormBuilder.getPolicyFormGroup().get('personalDetails').value)
+    }
     this.presentPolicy=PolicyNavigation.INCOME_DETAILS;
   }
 

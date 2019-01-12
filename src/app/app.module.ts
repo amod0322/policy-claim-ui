@@ -7,7 +7,7 @@ import { HomeComponent } from './policy-claim-ui/home/home.component';
 import { LoginComponent } from './policy-claim-ui/login/login.component';
 import { RegistrationComponent } from './policy-claim-ui/registration/registration.component';
 import { PolicyModule } from './policy-claim-ui/home/policy/policy.module';
-
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { PolicyModule } from './policy-claim-ui/home/policy/policy.module';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     PolicyModule
   ],

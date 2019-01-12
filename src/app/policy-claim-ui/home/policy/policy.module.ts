@@ -5,6 +5,7 @@ import { PersonalDetailsComponent } from './personal-details/personal-details.co
 import { IncomeDetailsComponent } from './income-details/income-details.component';
 import { NomineeDetailsComponent } from './nominee-details/nominee-details.component';
 import { PolicyDetailsComponent } from './policy-details/policy-details.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PolicyDetailsComponent } from './policy-details/policy-details.componen
     NomineeDetailsComponent, 
     PolicyDetailsComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports:[PolicyComponent]
 })

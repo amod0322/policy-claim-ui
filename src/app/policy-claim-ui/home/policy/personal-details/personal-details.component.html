@@ -1,3 +1,13 @@
-<p>
-  personal-details works!
-</p>
+personal-details
+
+<form class="container" [formGroup]="personalDetilsFormGroup">
+  <label>Name</label>
+  <input type="text" name="name" id="name" placeholder="name" formControlName="name"><br>
+  <label>Date Of Birth</label>
+  <input type="text" name="dob" id="dob" placeholder="date of birth" formControlName="dob"><br>
+  <label>street</label>
+  <input type="text" name="street" id="street" placeholder="street"><br>
+  <label>Name</label>
+  <input type="text" name="city" id="city" placeholder="city"><br>
+
+</form>
