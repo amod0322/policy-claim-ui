@@ -1,3 +1,10 @@
-<p>
-  policy works!
-</p>
+<div [ngSwitch]="presentPolicy">
+  <app-personal-details    *ngSwitchCase= "navigation.PERSONAL_DETAILS"   ></app-personal-details>
+  <app-income-details    *ngSwitchCase="navigation.INCOME_DETAILS"    ></app-income-details>
+  <app-nominee-details    *ngSwitchCase="navigation.NOMINEE_DETAILS"   ></app-nominee-details>
+  <app-policy-details    *ngSwitchCase="navigation.POLICY_DETAILS"   ></app-policy-details>
+  <app-personal-details    *ngSwitchDefault  ></app-personal-details>
+ 
+</div>
+
+<button (click)="navigationChange()"> Next</button>
