@@ -1,4 +1,4 @@
-export  class Address{
+export  class AddressModel{
     street:string;
     city :string
 }

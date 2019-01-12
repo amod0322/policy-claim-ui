@@ -1,8 +1,8 @@
-import { Address } from "./address.model";
+import { AddressModel } from "./address.model";
 
-export class  PersonalDetails {
+export class  PersonalDetailsModel {
     name:string;
     dob:Date;
-    address:Address;
+    address:AddressModel;
     
 }
