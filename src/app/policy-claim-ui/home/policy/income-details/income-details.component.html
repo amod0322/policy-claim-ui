@@ -5,7 +5,7 @@
   <label>Total Income</label>
   <input type="text" name="totalincome" id="totalincome" placeholder="total income" formControlName="totalIncome"><br>
   <app-error [control]="incomeDetail.get('totalIncome')" [errMsg]="'Number Only'"></app-error>
-  <button (click)="removeIncomeDetails(i)"> Delete</button>
+  <button (click)="removeIncomeDetails(i)" *ngIf="i>0"> Delete</button>
 </div>
 
 
