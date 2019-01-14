@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
+import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms'
 
 @Injectable({
   providedIn: 'root'
@@ -31,11 +31,14 @@ export class PolicyFormBuilderService {
     return personalDetails;
   }
 
-  getIncomeDetailsFormGroup(): FormGroup {
-    let incomeDetails = this.policyFormBuilder.group({
+  getIncomeDetailsFormGroup(): FormArray{
+    let incomeDetails = new FormArray([
+    ]);
+    let  incomeDetailsFormGroup=  this.policyFormBuilder.group({
       incomeSource: new FormControl(''),
-      totalIncome: new FormControl('')
+      totalIncome: new FormControl('',[Validators.pattern("\d")])
     })
+    incomeDetails.push(incomeDetailsFormGroup);
     return incomeDetails;
   }
 

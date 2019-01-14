@@ -1,3 +1,4 @@
+import { ErrorComponent } from './policy-claim-ui/common/error/error.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,15 +10,22 @@ import { RegistrationComponent } from './policy-claim-ui/registration/registrati
 import { PolicyModule } from './policy-claim-ui/home/policy/policy.module';
 import {ReactiveFormsModule} from '@angular/forms';
 
+import {HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     PolicyClaimUiComponent,
     HomeComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
     PolicyModule
