@@ -35,8 +35,8 @@ export class PolicyFormBuilderService {
     let incomeDetails = new FormArray([
     ]);
     let  incomeDetailsFormGroup=  this.policyFormBuilder.group({
-      incomeSource: new FormControl(''),
-      totalIncome: new FormControl('',[Validators.pattern("\d")])
+      incomeSource: new FormControl('',[Validators.pattern("[a-c]*")]),
+      totalIncome: new FormControl('',[Validators.pattern("[0-9]*")])
     })
     incomeDetails.push(incomeDetailsFormGroup);
     return incomeDetails;

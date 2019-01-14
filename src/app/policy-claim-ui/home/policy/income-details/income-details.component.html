@@ -1,10 +1,10 @@
-
 <div *ngFor="let incomeDetail of incomeDetailsFormArray.controls; let i = index" [formGroup]="incomeDetail">
   <label>Income Source</label>
   <input type="text" name="incomesource" id="incomesource" placeholder="Income Source" formControlName="incomeSource"><br>
+  <app-error [control]="incomeDetail.get('incomeSource')" [errMsg]= "'Char Only'"></app-error>
   <label>Total Income</label>
   <input type="text" name="totalincome" id="totalincome" placeholder="total income" formControlName="totalIncome"><br>
-  <app-error [control]="incomeDetail"></app-error>
+  <app-error [control]="incomeDetail.get('totalIncome')" [errMsg]="'Number Only'"></app-error>
   <button (click)="removeIncomeDetails(i)"> Delete</button>
 </div>
 

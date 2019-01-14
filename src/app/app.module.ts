@@ -1,4 +1,4 @@
-import { ErrorComponent } from './policy-claim-ui/common/error/error.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,8 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     PolicyClaimUiComponent,
     HomeComponent,
     LoginComponent,
-    RegistrationComponent,
-    ErrorComponent
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

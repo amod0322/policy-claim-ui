@@ -8,7 +8,9 @@ import { AbstractControl } from '@angular/forms';
 })
 export class ErrorComponent implements OnInit {
   @Input() control: AbstractControl;
-  errMsg: string = '';
+  @Input() errMsg: string;
+  showErrMsg:boolean=false;
+
   constructor() { }
 
   ngOnInit() {
@@ -19,7 +21,9 @@ export class ErrorComponent implements OnInit {
 
   checkStatus(statusInput) {
     if (statusInput === 'INVALID') {
-      this.errMsg = 'NOT A VALID VALUE';
+      this.showErrMsg = true;
+    }else if(statusInput==='VALID'){
+      this.showErrMsg = false;
     }
   }
 
