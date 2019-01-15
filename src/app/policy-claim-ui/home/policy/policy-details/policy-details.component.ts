@@ -11,6 +11,9 @@ export class PolicyDetailsComponent implements OnInit {
   policyDetailsFormGroup: FormGroup
   constructor(private policyFormBuilderService: PolicyFormBuilderService) { }
 
+
+
+  
   ngOnInit() {
     console.log(this.policyFormBuilderService.getPolicyFormGroup())
     this.policyDetailsFormGroup = this.policyFormBuilderService.getPolicyFormGroup().get('policyDetails') as FormGroup;

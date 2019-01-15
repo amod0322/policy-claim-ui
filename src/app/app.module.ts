@@ -1,3 +1,4 @@
+import { ClaimModule } from './policy-claim-ui/home/claim/claim.module';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    PolicyModule
+    PolicyModule,
+    ClaimModule
   ],
   providers: [],
   bootstrap: [PolicyClaimUiComponent]

@@ -6,7 +6,7 @@ import { PersonalDetailsModel } from "./personal-details.model";
 
 export class PolicyModel{
     personalDetails:PersonalDetailsModel;
-    incomeDetails:IncomeDetailsModel;
+    incomeDetails:IncomeDetailsModel[];
     nomineeDetails:NomineeDetailsModel;
     policyDetails:PolicyDetailsModel;
 }

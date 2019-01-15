@@ -2,6 +2,7 @@ import { FormGroup } from '@angular/forms';
 import { PolicySaveService } from './policy-save.service';
 import { PolicyFormBuilderService } from './policy-form-builder.service';
 import { Component, OnInit } from '@angular/core';
+import { PolicyModel } from '../../models/policy.model';
 
 @Component({
   selector: 'app-policy',
@@ -17,9 +18,10 @@ export class PolicyComponent implements OnInit {
   constructor(private policyFormBuilder: PolicyFormBuilderService, private policySaveService: PolicySaveService) { }
   policyFormGroup: FormGroup;
 
+
   ngOnInit() {
     this.presentPolicy = PolicyNavigation.PERSONAL_DETAILS;
-    this.policyFormBuilder.build()
+    this.policyFormBuilder.build(new PolicyModel());
     this.policyFormGroup = this.policyFormBuilder.getPolicyFormGroup();
 
   }
