@@ -1,0 +1,12 @@
+.empty-space {
+    content: '.';
+    visibility: hidden;
+    height: 25px;
+}
+
+.empty-space.error-class {
+    visibility: visible;
+    border-radius: 5px;
+    font-style: italic;
+    color: red;
+}

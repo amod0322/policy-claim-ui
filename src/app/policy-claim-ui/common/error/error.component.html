@@ -1,3 +1,6 @@
-<div *ngIf="showErrMsg">
-{{errMsg}}
+<div *ngIf="showErrMsg; else elseBlock" class="empty-space error-class">
+    {{errMsg}}
 </div>
+<ng-template #elseBlock>
+    <div class="empty-space"></div>
+</ng-template>
